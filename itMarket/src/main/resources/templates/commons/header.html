@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<th:block th:fragment="footer">
+	<meta charset="UTF-8">
+	<header class="masthead"
+		style="background-image: url('img/home-bg.jpg')">
+		<div class="overlay"></div>
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8 col-md-10 mx-auto">
+					<div class="site-heading">
+						<h2>세상의 모든 재능</h2>
+						<span class="subheading">아이티 마켓 IT market</span> <br>
+						<button class="btn btn-success btn-block" data-toggle="collapse"
+							data-target="#searchPanel">검 색</button>
+						<br>
+						<div id="searchPanel" class="collapse">
+							<div class="jumbotron">
+								<div class="input-group mb-3">
+									<div class="input-group-prepend" style="margin-right: 10px;">
+										<select class="form-control" id="sel1">
+											<option>제목</option>
+											<option>포함된 내용</option>
+											<option>판매자</option>
+											<option>태그</option>
+										</select>
+									</div>
+									<input type="text" class="form-control" id="usr">
+								</div>
+								<div class="input-group mb-3">
+									<div class="input-group-prepend">
+										<span class="input-group-text">가격</span>
+									</div>
+									<input type="text" class="form-control"><span
+										style="color: black; margin-left: 5px; margin-right: 5px;">
+										~ </span> <input type="text" class="form-control">
+								</div>
+								<div class="form-check-inline">
+									<label class="form-check-label" style="color: black;">
+										<input type="radio" class="form-check-input" name="optradio">전체보기
+									</label>
+								</div>
+								<div class="form-check-inline">
+									<label class="form-check-label" style="color: black;">
+										<input type="radio" class="form-check-input" name="optradio">리뷰
+										있는 것만
+									</label>
+								</div>
+								<div class="form-check-inline">
+									<label class="form-check-label" style="color: black;">
+										<input type="radio" class="form-check-input" name="optradio">리뷰
+										없는 것만
+									</label>
+								</div>
+								<br>
+								<br>
+								<button type="button" class="btn btn-info btn-block">검색하기</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+</th:block>
+</html>

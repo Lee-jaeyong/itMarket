@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko" 
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<th:block th:insert="commons/top_bottom::top"></th:block>
+<meta charset="utf-8">
+<body>
+  <th:block th:insert="commons/menu::menu"></th:block>
+  <th:block th:insert="commons/header::header"></th:block>
+  
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <p>
+        	* 많은 사용자가 기다리고 있습니다. 당신만의 재능을 등록해보세요!
+        </p>
+        <form name="sentMessage" id="contactForm" novalidate>
+          <div class="form-group">
+		    <label for="sel1">카테고리:</label>
+		    <select class="form-control" id="sel1">
+		      <option>디자인</option>
+		      <option>시스템 개발</option>
+		      <option>서비스 개발</option>
+		      <option>안드로이드</option>
+		      <option>기획</option>
+		      <option>유지보수</option>
+		      <option>쇼핑몰</option>
+		      <option>강의</option>
+		    </select>
+		  </div>
+          <div class="control-group">
+            <div class="form-group floating-label-form-group controls">
+              <label>제 목(최대 50자 이내)</label>
+              <input type="text" class="form-control" placeholder="제 목(최대 50자 이내)" id="name">
+            </div>
+          </div>
+          <br>
+          <div class="control-group">
+            <div class="form-group floating-label-form-group controls">
+              <label>최저 금액</label>
+              <input type="text" class="form-control" placeholder="최저 금액" id="price">
+            </div>
+          </div>
+          <br>
+          <div class="control-group">
+            <div class="form-group floating-label-form-group controls">
+              <label>내 용(최대 255자 이내)</label>
+              <textarea rows="5" class="form-control" placeholder="내 용(최대 255자 이내)" id="message"></textarea>
+            </div>
+          </div>
+          <br>
+          <div class="control-group">
+            <div class="form-group floating-label-form-group controls">
+              <label>#해시태그(최대 5개까지 등록 가능)</label>
+              <input type="text" class="form-control" placeholder="#해시태그(최대 5개까지 등록 가능)">
+            </div>
+            <br>
+            <button type="button" class="btn btn-secondary btn-block">해시 태그 등 록</button>
+          </div>
+     	  <br>
+     	  <br>
+		  <div>
+              <label>썸네일 이미지</label>
+			  <input type="file" class="form-control-file border">
+		  </div>
+		  <br>
+          <br>
+          <br>
+          <br>
+          <center>
+          <div class="form-check">
+   		    <label class="form-check-label">
+		    <input type="checkbox" class="form-check-input" value="">위 사항대로 재능을 등록합니다.
+		   </label>
+		  </div>
+		  <br>
+		  </center>
+          <button type="submit" class="btn btn-primary btn-block" id="sendMessageButton">등록하기</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <th:block th:insert="commons/footer::footer"></th:block>
+  <th:block th:insert="commons/top_bottom::bottom"></th:block>
+</body>
+
+</html>
